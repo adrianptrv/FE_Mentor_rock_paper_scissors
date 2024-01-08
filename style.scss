@@ -9,14 +9,14 @@ body {
 }
 
 
-.content-holder {
+.header-holder {
     width: 55dvw;
     margin: auto;
+    margin-top: 43px;
 
     .header-div {
         display: flex;
         justify-content: space-between;
-        margin-top: 43px;
         border: 3px solid hsl(217, 16%, 45%);
         border-radius: 15px;
 
@@ -28,6 +28,7 @@ body {
             background-color: white;
             border-radius: 10px;
             margin: 15px 20px 15px 0;
+
             .score-text {
                 color: hsl(229, 64%, 46%);
                 display: block;
@@ -44,4 +45,43 @@ body {
             }
         }
     }
+}
+
+.main-holder {
+    border: 1px solid yellow;
+
+    .background {
+        background-image: url(images/bg-triangle.svg);
+        background-size: 280px;
+        height: 280px;
+        background-repeat: no-repeat;
+        width: 280px;
+        margin: auto;
+        margin-top: 150px;
+
+        position: relative;
+
+        .rock,
+        .paper,
+        .sciss {
+            border: 1px solid red;
+
+        }
+
+        .paper {
+            float: left;
+        }
+
+        .sciss {
+            float: right;
+        }
+
+        .rock {
+            position: absolute;
+            bottom: 0;
+            left: 40%;
+        }
+
+    }
+
 }

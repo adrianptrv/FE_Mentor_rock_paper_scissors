@@ -5,35 +5,65 @@ body {
   font-family: "Barlow Semi Condensed", sans-serif;
 }
 
-.content-holder {
+.header-holder {
   width: 55dvw;
   margin: auto;
+  margin-top: 43px;
 }
-.content-holder .header-div {
+.header-holder .header-div {
   display: flex;
   justify-content: space-between;
-  margin-top: 43px;
   border: 3px solid hsl(217, 16%, 45%);
   border-radius: 15px;
 }
-.content-holder .header-div img {
+.header-holder .header-div img {
   padding: 23px;
 }
-.content-holder .header-div div {
+.header-holder .header-div div {
   background-color: white;
   border-radius: 10px;
   margin: 15px 20px 15px 0;
 }
-.content-holder .header-div div .score-text {
+.header-holder .header-div div .score-text {
   color: hsl(229, 64%, 46%);
   display: block;
   font-weight: 600;
   font-size: 18px;
   padding: 14px 50px 0 50px;
 }
-.content-holder .header-div div .score-number {
+.header-holder .header-div div .score-number {
   color: hsl(229, 25%, 31%);
   font-weight: 700;
   font-size: 55px;
   margin-left: 36%;
+}
+
+.main-holder {
+  border: 1px solid yellow;
+}
+.main-holder .background {
+  background-image: url(images/bg-triangle.svg);
+  background-size: 280px;
+  height: 280px;
+  background-repeat: no-repeat;
+  width: 280px;
+  margin: auto;
+  margin-top: 150px;
+  position: relative;
+}
+.main-holder .background .rock,
+.main-holder .background .paper,
+.main-holder .background .sciss {
+  border: 1px solid red;
+}
+.main-holder .background .paper {
+  float: left;
+}
+.main-holder .background .sciss {
+  float: right;
+}
+.main-holder .background .rock {
+  position: absolute;
+  bottom: 0;
+  left: 40%;
 }/*# sourceMappingURL=style.css.map */
