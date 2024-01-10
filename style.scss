@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;700&family=Roboto:ital,wght@1,300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Rubik&display=swap');
+
+
 
 
 body {
@@ -32,23 +34,26 @@ body {
             .score-text {
                 color: hsl(229, 64%, 46%);
                 display: block;
-                font-weight: 600;
-                font-size: 18px;
+                font-weight: bold;
+                font-size: 16px;
                 padding: 14px 50px 0 50px;
+                letter-spacing: 2px;
             }
 
             .score-number {
                 color: hsl(229, 25%, 31%);
-                font-weight: 700;
+                font-weight: bold;
+                -webkit-text-stroke: 3px;
                 font-size: 55px;
-                margin-left: 36%;
+                letter-spacing: 2px;
+                margin-left: 35%;
             }
         }
     }
 }
 
 .main-holder {
-    border: 1px solid yellow;
+
 
     .background {
         background-image: url(images/bg-triangle.svg);
@@ -61,27 +66,72 @@ body {
 
         position: relative;
 
-        .rock,
-        .paper,
-        .sciss {
-            border: 1px solid red;
-
-        }
 
         .paper {
             float: left;
+            width: 115px;
+            height: 115px;
+            margin: -40px 0 0 -40px;
+            background: linear-gradient(#e5e5e5, #e5e5e5) padding-box, linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%)) border-box;
+            border-radius: 80px;
+            border: 17px solid transparent;
+            box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgb(32 52 156);;
+            transform: translateY(-11px) scale(1.03);
+
+            img {
+                margin: 27px 0 0 30px
+            }
         }
 
         .sciss {
             float: right;
+            width: 115px;
+            height: 115px;
+            margin: -40px -40px 0 0;
+            background: linear-gradient(#e5e5e5, #e5e5e5) padding-box, linear-gradient(to bottom, hsl(39deg 100% 50% / 88%), hsla(40, 84%, 53%, 0.88)) border-box;
+            border-radius: 80px;
+            border: 17px solid transparent;
+            box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgb(160 115 19);
+            transform: translateY(-11px) scale(1.03);
+
+            img {
+                margin: 28px 0 0 32px
+            }
         }
 
         .rock {
             position: absolute;
-            bottom: 0;
-            left: 40%;
-        }
+            bottom: -15px;
+            left: 23%;
+            width: 115px;
+            height: 115px;
+            margin: -25px -25px 0 0;
+            background: linear-gradient(#e5e5e5, #e5e5e5) padding-box, linear-gradient(to bottom, hsl(349, 71%, 52%), hsl(349, 70%, 56%)) border-box;
+            border-radius: 80px;
+            border: 17px solid transparent;
+            box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgb(152 0 28);
+            transform: translateY(-11px) scale(1.03);
 
+            img {
+                margin: 35px 0 0 32px
+            }
+        }
+     
     }
 
+
 }
+
+
+button{
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    padding: 8px 30px 8px 35px;
+    border: 1.5px solid white;
+    border-radius: 8px;
+    background-color: transparent;
+    color: white;
+    letter-spacing: 2px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    }
