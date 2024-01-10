@@ -107,4 +107,46 @@ button {
   color: white;
   letter-spacing: 2px;
   font-family: "Barlow Semi Condensed", sans-serif;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.modal-section {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  top: 0;
+}
+.modal-section .modal-content {
+  background: white;
+  padding: 0px 14px 37px 40px;
+  width: 330px;
+  margin: auto;
+  margin-top: 230px;
+  border-radius: 10px;
+}
+.modal-section .modal-head {
+  padding-top: 5px;
+}
+.modal-section .modal-head h1 {
+  float: left;
+  font-weight: bold;
+  -webkit-text-stroke: 1px;
+  color: hsl(229, 25%, 31%);
+  margin-left: -10px;
+}
+.modal-section .modal-head img {
+  float: right;
+  margin-top: 26px;
+  margin-right: 15px;
+}
+.modal-section .modal-head img:hover {
+  cursor: pointer;
+}
+.modal-section .modal-main img {
+  padding-top: 25px;
 }/*# sourceMappingURL=style.css.map */

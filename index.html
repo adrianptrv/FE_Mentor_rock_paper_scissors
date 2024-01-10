@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.png">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Rock</title>
 </head>
 
@@ -24,17 +26,26 @@
         </div>
     </section>
 
-<section class="main-holder">
- <div class="background">
-    <div class="paper"><img src="images/icon-paper.svg"></div>
-    <div class="sciss"><img src="images/icon-scissors.svg"></div>
-    <div class="rock"><img src="images/icon-rock.svg"></div>
+    <section class="main-holder">
+        <div class="background">
+            <div class="paper"><img src="images/icon-paper.svg"></div>
+            <div class="sciss"><img src="images/icon-scissors.svg"></div>
+            <div class="rock"><img src="images/icon-rock.svg"></div>
+        </div>
+    </section>
 
- </div>
-
-</section>
-
-<button>RULES</button>
+    <button class="open-btn" onclick="openWindow()">RULES</button>
+    <section class="modal-section">
+        <div class="modal-content">
+            <div class="modal-head">
+                <h1>RULES</h1>
+                <img src="images/icon-close.svg" class="close-btn" onclick="closeWindow()">
+            </div>
+            <div class="modal-main">
+                <img src="images/image-rules.svg"></img>
+            </div>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
