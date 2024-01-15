@@ -47,6 +47,7 @@ function startGame(picked) {
 
     //Generate random number between 1 and 3, for the house chosen symbol
     var houseNum = randomNum(1, 3);
+    var housePick = "";
 
     //Change house picked symbol to the one euqling the random number
     setTimeout(function () {
@@ -54,34 +55,49 @@ function startGame(picked) {
             case 1:
                 $("#house-def1").removeClass("house-def").addClass("paper-win");
                 $(".house-img").attr("src", "images/icon-paper.svg");
-                houseNum = "paper"
-                $("#house-def1").addClass("glow-paper")
+                housePick = "paper"
                 break;
 
             case 2:
                 $("#house-def1").removeClass("house-def").addClass("sciss-win");
                 $(".house-img").attr("src", "images/icon-scissors.svg");
-                houseNum = "sciss"
-                $("#house-def1").addClass("glow-sciss")
+                housePick = "sciss"
                 break;
 
             case 3:
                 $("#house-def1").removeClass("house-def").addClass("rock-win");
                 $(".house-img").attr("src", "images/icon-rock.svg");
-                houseNum = "rock"
-                $("#house-def1").addClass("glow-rock")
+                housePick = "rock"
                 break;
         }
 
         //Determining the winner and displaying the text
-        if (picked == houseNum) {
+        if (picked == housePick) {
             $("#res-sentence").text("TIE");
         }
-        else if ((picked == "paper" && houseNum == "rock") || (picked == "sciss" && houseNum == "paper") || (picked == "rock" && houseNum == "sciss")) {
+        else if ((picked == "paper" && housePick == "rock") || (picked == "sciss" && housePick == "paper") || (picked == "rock" && housePick == "sciss")) {
             $("#res-sentence").text("YOU WIN");
+            if (picked == "paper"){
+                $("#you-def1").addClass("glow-paper")
+            }
+            else if (picked == "sciss"){
+                $("#you-def1").addClass("glow-sciss")
+            }
+            else if (picked == "rock"){
+                $("#you-def1").addClass("glow-rock")
+            }
         }
         else {
             $("#res-sentence").text("YOU LOSE");
+            if (housePick == "paper"){
+                $("#house-def1").addClass("glow-paper")
+            }
+            else if (housePick == "sciss"){
+                $("#house-def1").addClass("glow-sciss")
+            }
+            else if (housePick == "rock"){
+                $("#house-def1").addClass("glow-rock")
+            }
         }
 
         $(".result-text").css("display", "block")
@@ -113,4 +129,5 @@ function playAgain() {
     $(".main-holder").css("display", "block")
     $("#house-def1").removeClass().addClass("house-def");
     $(".house-img").attr("src", " ");
+    $(".result-text").css("display", "none")
 }
