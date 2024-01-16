@@ -21,6 +21,18 @@ window.onclick = function (event) {
 
 ///////////////////////////////////////////////////////////////////////////
 
+if (isNaN(localStorage.clickResult)) {
+    localStorage.clickResult = 0;
+}
+
+//Get the initial score
+var result = parseInt(localStorage.clickResult);
+$(".score-number").text(result)
+
+//Declare variables for random number and the house picked symbol
+var houseNum;
+var housePick = "";
+
 
 function startGame(picked) {
     //Change section displays when you start the game
@@ -46,8 +58,10 @@ function startGame(picked) {
     }
 
     //Generate random number between 1 and 3, for the house chosen symbol
-    var houseNum = randomNum(1, 3);
-    var housePick = "";
+    houseNum = randomNum(1, 3);
+
+    //Check current score 
+    result = parseInt(localStorage.clickResult);
 
     //Change house picked symbol to the one euqling the random number
     setTimeout(function () {
@@ -77,25 +91,29 @@ function startGame(picked) {
         }
         else if ((picked == "paper" && housePick == "rock") || (picked == "sciss" && housePick == "paper") || (picked == "rock" && housePick == "sciss")) {
             $("#res-sentence").text("YOU WIN");
-            if (picked == "paper"){
+            $(".score-number").text(result + 1)
+            localStorage.clickResult = result + 1
+            if (picked == "paper") {
                 $("#you-def1").addClass("glow-paper")
             }
-            else if (picked == "sciss"){
+            else if (picked == "sciss") {
                 $("#you-def1").addClass("glow-sciss")
             }
-            else if (picked == "rock"){
+            else if (picked == "rock") {
                 $("#you-def1").addClass("glow-rock")
             }
         }
         else {
             $("#res-sentence").text("YOU LOSE");
-            if (housePick == "paper"){
+            $(".score-number").text(result - 1)
+            localStorage.clickResult = result - 1
+            if (housePick == "paper") {
                 $("#house-def1").addClass("glow-paper")
             }
-            else if (housePick == "sciss"){
+            else if (housePick == "sciss") {
                 $("#house-def1").addClass("glow-sciss")
             }
-            else if (housePick == "rock"){
+            else if (housePick == "rock") {
                 $("#house-def1").addClass("glow-rock")
             }
         }
@@ -105,26 +123,14 @@ function startGame(picked) {
     }, 2000);
 }
 
-
-
-
 //Generate random number - (Simulating the house picking rock,paper or scissors)
 function randomNum(min, max) {
     var num = (Math.floor(Math.random() * (max - min + 1) + min));
     return num;
 }
 
-
-
-
-
-
-
-
-
-
+//Change back the section displays, when you want to play again
 function playAgain() {
-    //Change back the section displays, when you want to play again
     $(".result-screen").css("display", "none")
     $(".main-holder").css("display", "block")
     $("#house-def1").removeClass().addClass("house-def");

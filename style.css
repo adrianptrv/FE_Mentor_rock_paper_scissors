@@ -23,6 +23,7 @@ body {
   background-color: white;
   border-radius: 10px;
   margin: 15px 20px 15px 0;
+  text-align: center;
 }
 .header-holder .header-div div .score-text {
   color: hsl(229, 64%, 46%);
@@ -38,7 +39,6 @@ body {
   -webkit-text-stroke: 3px;
   font-size: 55px;
   letter-spacing: 2px;
-  margin-left: 35%;
 }
 
 .main-holder {
@@ -64,9 +64,11 @@ body {
   border: 17px solid transparent;
   box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgb(32, 52, 156);
   transform: translateY(-11px) scale(1.03);
+  transition: 0.5s;
 }
 .main-holder .background .paper:hover {
   cursor: pointer;
+  box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(32, 52, 156), 0 0 0 8px rgba(200, 200, 200, 0.1), 0 0 0 16px rgba(200, 200, 200, 0.1), 0 0 0 24px rgba(200, 200, 200, 0.1);
 }
 .main-holder .background .paper img {
   margin: 27px 0 0 30px;
@@ -81,9 +83,11 @@ body {
   border: 17px solid transparent;
   box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgb(160, 115, 19);
   transform: translateY(-11px) scale(1.03);
+  transition: 0.5s;
 }
 .main-holder .background .sciss:hover {
   cursor: pointer;
+  box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(160, 115, 19), 0 0 0 8px rgba(200, 200, 200, 0.1), 0 0 0 16px rgba(200, 200, 200, 0.1), 0 0 0 24px rgba(200, 200, 200, 0.1);
 }
 .main-holder .background .sciss img {
   margin: 28px 0 0 32px;
@@ -100,9 +104,11 @@ body {
   border: 17px solid transparent;
   box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgb(152, 0, 28);
   transform: translateY(-11px) scale(1.03);
+  transition: 0.5s;
 }
 .main-holder .background .rock:hover {
   cursor: pointer;
+  box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(152, 0, 28), 0 0 0 8px rgba(200, 200, 200, 0.1), 0 0 0 16px rgba(200, 200, 200, 0.1), 0 0 0 24px rgba(200, 200, 200, 0.1);
 }
 .main-holder .background .rock img {
   margin: 35px 0 0 32px;
