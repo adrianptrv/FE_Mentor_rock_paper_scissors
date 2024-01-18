@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Rubik&display=swap");
 body {
+  margin: unset;
   background: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   background-attachment: fixed;
   font-family: "Barlow Semi Condensed", sans-serif;
@@ -10,6 +11,11 @@ body {
   margin: auto;
   margin-top: 43px;
 }
+@media only screen and (max-width: 700px) {
+  .header-holder {
+    width: 90%;
+  }
+}
 .header-holder .header-div {
   display: flex;
   justify-content: space-between;
@@ -19,11 +25,21 @@ body {
 .header-holder .header-div img {
   padding: 23px;
 }
+@media only screen and (max-width: 700px) {
+  .header-holder .header-div img {
+    width: 110px;
+  }
+}
 .header-holder .header-div div {
   background-color: white;
   border-radius: 10px;
   margin: 15px 20px 15px 0;
   text-align: center;
+}
+@media only screen and (max-width: 700px) {
+  .header-holder .header-div div {
+    padding-bottom: 10px;
+  }
 }
 .header-holder .header-div div .score-text {
   color: hsl(229, 64%, 46%);
@@ -33,12 +49,23 @@ body {
   padding: 14px 50px 0 50px;
   letter-spacing: 2px;
 }
+@media only screen and (max-width: 700px) {
+  .header-holder .header-div div .score-text {
+    font-size: 13px;
+    padding: 14px 25px 0 25px;
+  }
+}
 .header-holder .header-div div .score-number {
   color: hsl(229, 25%, 31%);
   font-weight: bold;
   -webkit-text-stroke: 3px;
   font-size: 55px;
   letter-spacing: 2px;
+}
+@media only screen and (max-width: 700px) {
+  .header-holder .header-div div .score-number {
+    font-size: 45px;
+  }
 }
 
 .main-holder {
@@ -54,6 +81,13 @@ body {
   margin-top: 150px;
   position: relative;
 }
+@media only screen and (max-width: 700px) {
+  .main-holder .background {
+    background-size: 220px;
+    height: 220px;
+    width: 220px;
+  }
+}
 .main-holder .background .paper {
   float: left;
   width: 115px;
@@ -66,12 +100,25 @@ body {
   transform: translateY(-11px) scale(1.03);
   transition: 0.5s;
 }
+@media only screen and (max-width: 700px) {
+  .main-holder .background .paper {
+    width: 100px;
+    height: 100px;
+    border-width: 12px;
+  }
+}
 .main-holder .background .paper:hover {
   cursor: pointer;
   box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(32, 52, 156), 0 0 0 8px rgba(200, 200, 200, 0.1), 0 0 0 16px rgba(200, 200, 200, 0.1), 0 0 0 24px rgba(200, 200, 200, 0.1);
 }
 .main-holder .background .paper img {
   margin: 27px 0 0 30px;
+}
+@media only screen and (max-width: 700px) {
+  .main-holder .background .paper img {
+    width: 45px;
+    margin: 23px 0 0 26px;
+  }
 }
 .main-holder .background .sciss {
   float: right;
@@ -85,12 +132,25 @@ body {
   transform: translateY(-11px) scale(1.03);
   transition: 0.5s;
 }
+@media only screen and (max-width: 700px) {
+  .main-holder .background .sciss {
+    width: 100px;
+    height: 100px;
+    border-width: 12px;
+  }
+}
 .main-holder .background .sciss:hover {
   cursor: pointer;
   box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(160, 115, 19), 0 0 0 8px rgba(200, 200, 200, 0.1), 0 0 0 16px rgba(200, 200, 200, 0.1), 0 0 0 24px rgba(200, 200, 200, 0.1);
 }
 .main-holder .background .sciss img {
   margin: 28px 0 0 32px;
+}
+@media only screen and (max-width: 700px) {
+  .main-holder .background .sciss img {
+    width: 45px;
+    margin: 26px 0 0 27px;
+  }
 }
 .main-holder .background .rock {
   position: absolute;
@@ -106,12 +166,26 @@ body {
   transform: translateY(-11px) scale(1.03);
   transition: 0.5s;
 }
+@media only screen and (max-width: 700px) {
+  .main-holder .background .rock {
+    width: 100px;
+    height: 100px;
+    border-width: 12px;
+    left: 21.5%;
+  }
+}
 .main-holder .background .rock:hover {
   cursor: pointer;
   box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(152, 0, 28), 0 0 0 8px rgba(200, 200, 200, 0.1), 0 0 0 16px rgba(200, 200, 200, 0.1), 0 0 0 24px rgba(200, 200, 200, 0.1);
 }
 .main-holder .background .rock img {
   margin: 35px 0 0 32px;
+}
+@media only screen and (max-width: 700px) {
+  .main-holder .background .rock img {
+    width: 45px;
+    margin: 28px 0 0 26px;
+  }
 }
 
 .open-btn {
@@ -125,6 +199,14 @@ body {
   color: white;
   letter-spacing: 2px;
   font-family: "Barlow Semi Condensed", sans-serif;
+}
+@media only screen and (max-width: 700px) {
+  .open-btn {
+    left: 0;
+    right: 0;
+    width: 112px;
+    margin: auto;
+  }
 }
 .open-btn:hover {
   cursor: pointer;
@@ -146,6 +228,14 @@ body {
   margin: auto;
   margin-top: 230px;
   border-radius: 10px;
+}
+@media only screen and (max-width: 700px) {
+  .modal-section .modal-content {
+    width: unset;
+    margin-top: unset;
+    border-radius: unset;
+    height: 100%;
+  }
 }
 .modal-section .modal-head {
   padding-top: 5px;
