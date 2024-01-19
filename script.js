@@ -21,11 +21,12 @@ window.onclick = function (event) {
 
 ///////////////////////////////////////////////////////////////////////////
 
+//Check if the score is existing in the user's local storage
 if (isNaN(localStorage.clickResult)) {
     localStorage.clickResult = 0;
 }
 
-//Get the initial score
+//Get and set the initial score to the scoreboard
 var result = parseInt(localStorage.clickResult);
 $(".score-number").text(result)
 
@@ -33,7 +34,7 @@ $(".score-number").text(result)
 var houseNum;
 var housePick = "";
 
-
+//Start game function attached to the game buttons
 function startGame(picked) {
     //Change section displays when you start the game
     $(".main-holder").css("display", "none")
@@ -129,7 +130,7 @@ function randomNum(min, max) {
     return num;
 }
 
-//Change back the section displays, when you want to play again
+//Change the screen to the main diplay and restart the game.
 function playAgain() {
     $(".result-screen").css("display", "none")
     $(".main-holder").css("display", "block")

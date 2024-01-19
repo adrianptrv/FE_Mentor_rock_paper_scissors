@@ -102,8 +102,8 @@ body {
 }
 @media only screen and (max-width: 700px) {
   .main-holder .background .paper {
-    width: 100px;
-    height: 100px;
+    width: 95px;
+    height: 95px;
     border-width: 12px;
   }
 }
@@ -116,8 +116,8 @@ body {
 }
 @media only screen and (max-width: 700px) {
   .main-holder .background .paper img {
-    width: 45px;
-    margin: 23px 0 0 26px;
+    width: 42px;
+    margin: 22px 0 0 24px;
   }
 }
 .main-holder .background .sciss {
@@ -134,8 +134,8 @@ body {
 }
 @media only screen and (max-width: 700px) {
   .main-holder .background .sciss {
-    width: 100px;
-    height: 100px;
+    width: 95px;
+    height: 95px;
     border-width: 12px;
   }
 }
@@ -148,8 +148,8 @@ body {
 }
 @media only screen and (max-width: 700px) {
   .main-holder .background .sciss img {
-    width: 45px;
-    margin: 26px 0 0 27px;
+    width: 42px;
+    margin: 24px 0 0 26px;
   }
 }
 .main-holder .background .rock {
@@ -168,8 +168,8 @@ body {
 }
 @media only screen and (max-width: 700px) {
   .main-holder .background .rock {
-    width: 100px;
-    height: 100px;
+    width: 95px;
+    height: 95px;
     border-width: 12px;
     left: 21.5%;
   }
@@ -183,8 +183,8 @@ body {
 }
 @media only screen and (max-width: 700px) {
   .main-holder .background .rock img {
-    width: 45px;
-    margin: 28px 0 0 26px;
+    width: 42px;
+    margin: 29px 0 0 25px;
   }
 }
 
@@ -234,11 +234,17 @@ body {
     width: unset;
     margin-top: unset;
     border-radius: unset;
+    padding: unset;
     height: 100%;
   }
 }
 .modal-section .modal-head {
   padding-top: 5px;
+}
+@media only screen and (max-width: 700px) {
+  .modal-section .modal-head {
+    padding-top: 20%;
+  }
 }
 .modal-section .modal-head h1 {
   float: left;
@@ -246,6 +252,13 @@ body {
   -webkit-text-stroke: 1px;
   color: hsl(229, 25%, 31%);
   margin-left: -10px;
+}
+@media only screen and (max-width: 700px) {
+  .modal-section .modal-head h1 {
+    float: unset;
+    text-align: center;
+    margin-left: unset;
+  }
 }
 .modal-section .modal-head img {
   float: right;
@@ -255,8 +268,23 @@ body {
 .modal-section .modal-head img:hover {
   cursor: pointer;
 }
+@media only screen and (max-width: 700px) {
+  .modal-section .modal-head img {
+    position: absolute;
+    left: 48.5%;
+    margin-left: unset;
+    float: unset;
+    bottom: 10%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .modal-section .modal-main {
+    width: 304px;
+    margin: auto;
+  }
+}
 .modal-section .modal-main img {
-  padding-top: 25px;
+  padding-top: 30%;
 }
 
 .result-screen {
@@ -271,6 +299,12 @@ body {
 }
 .result-screen .result-text {
   display: none;
+}
+@media only screen and (max-width: 700px) {
+  .result-screen .result-text {
+    position: absolute;
+    bottom: 110px;
+  }
 }
 .result-screen h1 {
   text-align: center;
@@ -318,9 +352,22 @@ body {
   transform: translateY(-11px) scale(1.03);
   transition: 2s;
 }
+@media only screen and (max-width: 700px) {
+  .result-screen .sciss-win {
+    width: 130px;
+    height: 130px;
+    border: 20px solid transparent;
+  }
+}
 .result-screen .sciss-win img {
   width: 80px;
   margin: 50px 0 0px 55px;
+}
+@media only screen and (max-width: 700px) {
+  .result-screen .sciss-win img {
+    width: 60px;
+    margin: 35px 0 0 35px;
+  }
 }
 .result-screen .rock-win {
   width: 190px;
@@ -332,9 +379,22 @@ body {
   transform: translateY(-11px) scale(1.03);
   transition: 2s;
 }
+@media only screen and (max-width: 700px) {
+  .result-screen .rock-win {
+    width: 130px;
+    height: 130px;
+    border: 20px solid transparent;
+  }
+}
 .result-screen .rock-win img {
   width: 80px;
   margin: 55px 0 0 52px;
+}
+@media only screen and (max-width: 700px) {
+  .result-screen .rock-win img {
+    width: 60px;
+    margin: 40px 0 0 35px;
+  }
 }
 .result-screen .paper-win {
   width: 190px;
@@ -346,9 +406,22 @@ body {
   transform: translateY(-11px) scale(1.03);
   transition: 2s;
 }
+@media only screen and (max-width: 700px) {
+  .result-screen .paper-win {
+    width: 130px;
+    height: 130px;
+    border: 20px solid transparent;
+  }
+}
 .result-screen .paper-win img {
   width: 80px;
   margin: 48px 0 0 50px;
+}
+@media only screen and (max-width: 700px) {
+  .result-screen .paper-win img {
+    width: 60px;
+    margin: 32px 0 0 32px;
+  }
 }
 .result-screen .house-def,
 .result-screen .you-def {
@@ -358,6 +431,14 @@ body {
   border: 30px solid transparent;
   transform: translateY(-11px) scale(1.03);
   background: #12123d;
+}
+@media only screen and (max-width: 700px) {
+  .result-screen .house-def,
+  .result-screen .you-def {
+    width: 130px;
+    height: 130px;
+    border: 20px solid transparent;
+  }
 }
 
 .glow-paper {
