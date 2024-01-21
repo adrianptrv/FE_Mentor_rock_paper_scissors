@@ -1,6 +1,32 @@
   @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Rubik&display=swap');
 
+///////Mixins///////
 
+  @mixin main-circle {
+      width: 115px;
+      height: 115px;
+      border-radius: 80px;
+      border: 17px solid transparent;
+      transform: translateY(-11px) scale(1.03);
+      transition: 0.5s;
+  }
+
+  @mixin win-circle {
+      width: 190px;
+      height: 190px;
+      border-radius: 135px;
+      border: 30px solid transparent;
+      transform: translateY(-11px) scale(1.03);
+      transition: 2s;
+  }
+
+  @mixin mobile-circle-size {
+      width: 100px;
+      height: 100px;
+      border: 15px solid transparent;
+  }
+
+//////////////////////
 
 
   body {
@@ -9,7 +35,6 @@
       background-attachment: fixed;
       font-family: 'Barlow Semi Condensed', sans-serif;
   }
-
 
   .header-holder {
       width: 55dvw;
@@ -95,16 +120,12 @@
 
 
           .paper {
+              @include main-circle;
               float: left;
-              width: 115px;
-              height: 115px;
               margin: -40px 0 0 -40px;
               background: linear-gradient(#e5e5e5, #e5e5e5) padding-box, linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%)) border-box;
-              border-radius: 80px;
-              border: 17px solid transparent;
               box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgb(32 52 156);
-              transform: translateY(-11px) scale(1.03);
-              transition: 0.5s;
+
 
               @media only screen and (max-width: 700px) {
                   width: 95px;
@@ -128,16 +149,11 @@
           }
 
           .sciss {
+              @include main-circle;
               float: right;
-              width: 115px;
-              height: 115px;
               margin: -40px -40px 0 0;
               background: linear-gradient(#e5e5e5, #e5e5e5) padding-box, linear-gradient(to bottom, hsl(39deg 100% 50% / 88%), hsla(40, 84%, 53%, 0.88)) border-box;
-              border-radius: 80px;
-              border: 17px solid transparent;
               box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgb(160 115 19);
-              transform: translateY(-11px) scale(1.03);
-              transition: 0.5s;
 
               @media only screen and (max-width: 700px) {
                   width: 95px;
@@ -161,18 +177,13 @@
           }
 
           .rock {
+              @include main-circle;
               position: absolute;
               bottom: -15px;
               left: 23%;
-              width: 115px;
-              height: 115px;
               margin: -25px -25px 0 0;
               background: linear-gradient(#e5e5e5, #e5e5e5) padding-box, linear-gradient(to bottom, hsl(349, 71%, 52%), hsl(349, 70%, 56%)) border-box;
-              border-radius: 80px;
-              border: 17px solid transparent;
               box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgb(152 0 28);
-              transform: translateY(-11px) scale(1.03);
-              transition: 0.5s;
 
               @media only screen and (max-width: 700px) {
                   width: 95px;
@@ -197,7 +208,6 @@
           }
 
       }
-
 
   }
 
@@ -225,7 +235,6 @@
       }
   }
 
-
   .modal-section {
       display: none;
       position: fixed;
@@ -240,7 +249,7 @@
           padding: 0px 14px 37px 40px;
           width: 330px;
           margin: auto;
-          margin-top: 230px;
+          margin-top: 175px;
           border-radius: 10px;
 
           @media only screen and (max-width: 700px) {
@@ -299,7 +308,11 @@
           }
 
           img {
-              padding-top: 30%;
+              padding-top: 10%;
+
+              @media only screen and (max-width: 700px) {
+                  padding-top: 30%;
+              }
           }
       }
   }
@@ -311,6 +324,11 @@
       margin: auto;
       margin-top: 160px;
 
+      @media only screen and (max-width: 700px) {
+          justify-content: space-around;
+          margin-top: 110px;
+          width: 100dvw;
+      }
 
       span {
           color: white;
@@ -318,9 +336,14 @@
 
       .result-text {
           display: none;
+
           @media only screen and (max-width: 700px) {
-            position: absolute;
-            bottom: 110px;
+              position: absolute;
+              bottom: 110px;
+          }
+
+          @media only screen and (max-height: 715px) {
+              bottom: 75px;
           }
       }
 
@@ -329,7 +352,14 @@
           text-align: center;
           font-size: 45px;
           color: white;
-      
+
+          @media only screen and (max-width: 700px) {
+              font-size: 55px;
+              font-weight: bolder;
+              margin-bottom: 20px;
+          }
+
+
       }
 
       button {
@@ -346,6 +376,10 @@
               color: #a52727;
               cursor: pointer;
           }
+
+          @media only screen and (max-width: 700px) {
+              width: 211px;
+          }
       }
 
       .you-picked {
@@ -355,16 +389,28 @@
           font-size: 18px;
           letter-spacing: 3px;
           font-weight: 700;
+
+          @media only screen and (max-width: 700px) {
+              font-size: 14px;
+              width: 96px;
+              top: unset;
+              bottom: -55px;
+              left: unset;
+          }
       }
 
       .house-picked {
-          position: absolute;
-          top: -110px;
+          @extend .you-picked;
           left: 5px;
-          font-weight: 700;
-          font-size: 18px;
           width: 215px;
-          letter-spacing: 3px;
+
+          @media only screen and (max-width: 700px) {
+              font-size: 14px;
+              width: 154px;
+              top: unset;
+              left: -30px;
+              bottom: -55px;
+          }
       }
 
       .sciss-win {
@@ -379,9 +425,7 @@
           transition: 2s;
 
           @media only screen and (max-width: 700px) {
-              width: 130px;
-              height: 130px;
-              border: 20px solid transparent;
+              @include mobile-circle-size;
           }
 
           img {
@@ -389,27 +433,19 @@
               margin: 50px 0 0px 55px;
 
               @media only screen and (max-width: 700px) {
-                  width: 60px;
-                  margin: 35px 0 0 35px;
+                  width: 45px;
+                  margin: 25px 0 0 27px;
               }
           }
       }
 
       .rock-win {
-
-          width: 190px;
-          height: 190px;
+          @include win-circle;
           background: linear-gradient(#e5e5e5, #e5e5e5) padding-box, linear-gradient(to bottom, hsl(349, 71%, 52%), hsl(349, 70%, 56%)) border-box;
-          border-radius: 135px;
-          border: 30px solid transparent;
           box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(152 0 28);
-          transform: translateY(-11px) scale(1.03);
-          transition: 2s;
 
           @media only screen and (max-width: 700px) {
-              width: 130px;
-              height: 130px;
-              border: 20px solid transparent;
+              @include mobile-circle-size;
           }
 
           img {
@@ -417,27 +453,20 @@
               margin: 55px 0 0 52px;
 
               @media only screen and (max-width: 700px) {
-                  width: 60px;
-                  margin: 40px 0 0 35px;
+                  width: 45px;
+                  margin: 30px 0 0 27px;
               }
           }
 
       }
 
       .paper-win {
-          width: 190px;
-          height: 190px;
+          @include win-circle;
           background: linear-gradient(#e5e5e5, #e5e5e5) padding-box, linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%)) border-box;
-          border-radius: 135px;
-          border: 30px solid transparent;
           box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(32 52 156);
-          transform: translateY(-11px) scale(1.03);
-          transition: 2s;
 
           @media only screen and (max-width: 700px) {
-              width: 130px;
-              height: 130px;
-              border: 20px solid transparent;
+              @include mobile-circle-size;
           }
 
           img {
@@ -445,8 +474,8 @@
               margin: 48px 0 0 50px;
 
               @media only screen and (max-width: 700px) {
-                  width: 60px;
-                  margin: 32px 0 0 32px;
+                  width: 45px;
+                  margin: 25px 0 0 26px;
               }
           }
       }
@@ -461,24 +490,31 @@
           background: #12123d;
 
           @media only screen and (max-width: 700px) {
-            width: 130px;
-            height: 130px;
-            border: 20px solid transparent;
-        }
+              @include mobile-circle-size;
+          }
       }
-
-
-
   }
 
   .glow-paper {
       box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(32, 52, 156), 0 0 0 40px rgb(255 255 255 / 10%), 0 0 0 80px rgb(255 255 255 / 10%), 0 0 0 125px rgb(255 255 255 / 10%) !important;
+
+      @media only screen and (max-width: 700px) {
+          box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(32, 52, 156), 0 0 0 15px rgb(255 255 255 / 5%), 0 0 0 40px rgb(255 255 255 / 5%), 0 0 0 70px rgb(255 255 255 / 5%) !important;
+      }
   }
 
   .glow-sciss {
       box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(160, 115, 19), 0 0 0 40px rgb(255 255 255 / 10%), 0 0 0 80px rgb(255 255 255 / 10%), 0 0 0 125px rgb(255 255 255 / 10%) !important;
+
+      @media only screen and (max-width: 700px) {
+          box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(160, 115, 19), 0 0 0 15px rgb(255 255 255 / 5%), 0 0 0 40px rgb(255 255 255 / 5%), 0 0 0 70px rgb(255 255 255 / 5%) !important;
+      }
   }
 
   .glow-rock {
       box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(152, 0, 28), 0 0 0 40px rgb(255 255 255 / 10%), 0 0 0 80px rgb(255 255 255 / 10%), 0 0 0 125px rgb(255 255 255 / 10%) !important;
+
+      @media only screen and (max-width: 700px) {
+          box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(152, 0, 28), 0 0 0 15px rgb(255 255 255 / 5%), 0 0 0 40px rgb(255 255 255 / 5%), 0 0 0 70px rgb(255 255 255 / 5%) !important;
+      }
   }

@@ -89,16 +89,16 @@ body {
   }
 }
 .main-holder .background .paper {
-  float: left;
   width: 115px;
   height: 115px;
-  margin: -40px 0 0 -40px;
-  background: linear-gradient(#e5e5e5, #e5e5e5) padding-box, linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%)) border-box;
   border-radius: 80px;
   border: 17px solid transparent;
-  box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgb(32, 52, 156);
   transform: translateY(-11px) scale(1.03);
   transition: 0.5s;
+  float: left;
+  margin: -40px 0 0 -40px;
+  background: linear-gradient(#e5e5e5, #e5e5e5) padding-box, linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%)) border-box;
+  box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgb(32, 52, 156);
 }
 @media only screen and (max-width: 700px) {
   .main-holder .background .paper {
@@ -121,16 +121,16 @@ body {
   }
 }
 .main-holder .background .sciss {
-  float: right;
   width: 115px;
   height: 115px;
-  margin: -40px -40px 0 0;
-  background: linear-gradient(#e5e5e5, #e5e5e5) padding-box, linear-gradient(to bottom, hsla(39, 100%, 50%, 0.88), hsla(40, 84%, 53%, 0.88)) border-box;
   border-radius: 80px;
   border: 17px solid transparent;
-  box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgb(160, 115, 19);
   transform: translateY(-11px) scale(1.03);
   transition: 0.5s;
+  float: right;
+  margin: -40px -40px 0 0;
+  background: linear-gradient(#e5e5e5, #e5e5e5) padding-box, linear-gradient(to bottom, hsla(39, 100%, 50%, 0.88), hsla(40, 84%, 53%, 0.88)) border-box;
+  box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgb(160, 115, 19);
 }
 @media only screen and (max-width: 700px) {
   .main-holder .background .sciss {
@@ -153,18 +153,18 @@ body {
   }
 }
 .main-holder .background .rock {
+  width: 115px;
+  height: 115px;
+  border-radius: 80px;
+  border: 17px solid transparent;
+  transform: translateY(-11px) scale(1.03);
+  transition: 0.5s;
   position: absolute;
   bottom: -15px;
   left: 23%;
-  width: 115px;
-  height: 115px;
   margin: -25px -25px 0 0;
   background: linear-gradient(#e5e5e5, #e5e5e5) padding-box, linear-gradient(to bottom, hsl(349, 71%, 52%), hsl(349, 70%, 56%)) border-box;
-  border-radius: 80px;
-  border: 17px solid transparent;
   box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px rgb(152, 0, 28);
-  transform: translateY(-11px) scale(1.03);
-  transition: 0.5s;
 }
 @media only screen and (max-width: 700px) {
   .main-holder .background .rock {
@@ -226,7 +226,7 @@ body {
   padding: 0px 14px 37px 40px;
   width: 330px;
   margin: auto;
-  margin-top: 230px;
+  margin-top: 175px;
   border-radius: 10px;
 }
 @media only screen and (max-width: 700px) {
@@ -284,7 +284,12 @@ body {
   }
 }
 .modal-section .modal-main img {
-  padding-top: 30%;
+  padding-top: 10%;
+}
+@media only screen and (max-width: 700px) {
+  .modal-section .modal-main img {
+    padding-top: 30%;
+  }
 }
 
 .result-screen {
@@ -293,6 +298,13 @@ body {
   width: 92dvw;
   margin: auto;
   margin-top: 160px;
+}
+@media only screen and (max-width: 700px) {
+  .result-screen {
+    justify-content: space-around;
+    margin-top: 110px;
+    width: 100dvw;
+  }
 }
 .result-screen span {
   color: white;
@@ -306,10 +318,22 @@ body {
     bottom: 110px;
   }
 }
+@media only screen and (max-height: 715px) {
+  .result-screen .result-text {
+    bottom: 75px;
+  }
+}
 .result-screen h1 {
   text-align: center;
   font-size: 45px;
   color: white;
+}
+@media only screen and (max-width: 700px) {
+  .result-screen h1 {
+    font-size: 55px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+  }
 }
 .result-screen button {
   width: 180px;
@@ -325,7 +349,12 @@ body {
   color: #a52727;
   cursor: pointer;
 }
-.result-screen .you-picked {
+@media only screen and (max-width: 700px) {
+  .result-screen button {
+    width: 211px;
+  }
+}
+.result-screen .you-picked, .result-screen .house-picked {
   position: absolute;
   top: -110px;
   left: 35px;
@@ -333,14 +362,27 @@ body {
   letter-spacing: 3px;
   font-weight: 700;
 }
+@media only screen and (max-width: 700px) {
+  .result-screen .you-picked, .result-screen .house-picked {
+    font-size: 14px;
+    width: 96px;
+    top: unset;
+    bottom: -55px;
+    left: unset;
+  }
+}
 .result-screen .house-picked {
-  position: absolute;
-  top: -110px;
   left: 5px;
-  font-weight: 700;
-  font-size: 18px;
   width: 215px;
-  letter-spacing: 3px;
+}
+@media only screen and (max-width: 700px) {
+  .result-screen .house-picked {
+    font-size: 14px;
+    width: 154px;
+    top: unset;
+    left: -30px;
+    bottom: -55px;
+  }
 }
 .result-screen .sciss-win {
   width: 190px;
@@ -354,9 +396,9 @@ body {
 }
 @media only screen and (max-width: 700px) {
   .result-screen .sciss-win {
-    width: 130px;
-    height: 130px;
-    border: 20px solid transparent;
+    width: 100px;
+    height: 100px;
+    border: 15px solid transparent;
   }
 }
 .result-screen .sciss-win img {
@@ -365,25 +407,25 @@ body {
 }
 @media only screen and (max-width: 700px) {
   .result-screen .sciss-win img {
-    width: 60px;
-    margin: 35px 0 0 35px;
+    width: 45px;
+    margin: 25px 0 0 27px;
   }
 }
 .result-screen .rock-win {
   width: 190px;
   height: 190px;
-  background: linear-gradient(#e5e5e5, #e5e5e5) padding-box, linear-gradient(to bottom, hsl(349, 71%, 52%), hsl(349, 70%, 56%)) border-box;
   border-radius: 135px;
   border: 30px solid transparent;
-  box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(152, 0, 28);
   transform: translateY(-11px) scale(1.03);
   transition: 2s;
+  background: linear-gradient(#e5e5e5, #e5e5e5) padding-box, linear-gradient(to bottom, hsl(349, 71%, 52%), hsl(349, 70%, 56%)) border-box;
+  box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(152, 0, 28);
 }
 @media only screen and (max-width: 700px) {
   .result-screen .rock-win {
-    width: 130px;
-    height: 130px;
-    border: 20px solid transparent;
+    width: 100px;
+    height: 100px;
+    border: 15px solid transparent;
   }
 }
 .result-screen .rock-win img {
@@ -392,25 +434,25 @@ body {
 }
 @media only screen and (max-width: 700px) {
   .result-screen .rock-win img {
-    width: 60px;
-    margin: 40px 0 0 35px;
+    width: 45px;
+    margin: 30px 0 0 27px;
   }
 }
 .result-screen .paper-win {
   width: 190px;
   height: 190px;
-  background: linear-gradient(#e5e5e5, #e5e5e5) padding-box, linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%)) border-box;
   border-radius: 135px;
   border: 30px solid transparent;
-  box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(32, 52, 156);
   transform: translateY(-11px) scale(1.03);
   transition: 2s;
+  background: linear-gradient(#e5e5e5, #e5e5e5) padding-box, linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%)) border-box;
+  box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(32, 52, 156);
 }
 @media only screen and (max-width: 700px) {
   .result-screen .paper-win {
-    width: 130px;
-    height: 130px;
-    border: 20px solid transparent;
+    width: 100px;
+    height: 100px;
+    border: 15px solid transparent;
   }
 }
 .result-screen .paper-win img {
@@ -419,8 +461,8 @@ body {
 }
 @media only screen and (max-width: 700px) {
   .result-screen .paper-win img {
-    width: 60px;
-    margin: 32px 0 0 32px;
+    width: 45px;
+    margin: 25px 0 0 26px;
   }
 }
 .result-screen .house-def,
@@ -435,20 +477,35 @@ body {
 @media only screen and (max-width: 700px) {
   .result-screen .house-def,
   .result-screen .you-def {
-    width: 130px;
-    height: 130px;
-    border: 20px solid transparent;
+    width: 100px;
+    height: 100px;
+    border: 15px solid transparent;
   }
 }
 
 .glow-paper {
   box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(32, 52, 156), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0.1), 0 0 0 125px rgba(255, 255, 255, 0.1) !important;
 }
+@media only screen and (max-width: 700px) {
+  .glow-paper {
+    box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(32, 52, 156), 0 0 0 15px rgba(255, 255, 255, 0.05), 0 0 0 40px rgba(255, 255, 255, 0.05), 0 0 0 70px rgba(255, 255, 255, 0.05) !important;
+  }
+}
 
 .glow-sciss {
   box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(160, 115, 19), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0.1), 0 0 0 125px rgba(255, 255, 255, 0.1) !important;
 }
+@media only screen and (max-width: 700px) {
+  .glow-sciss {
+    box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(160, 115, 19), 0 0 0 15px rgba(255, 255, 255, 0.05), 0 0 0 40px rgba(255, 255, 255, 0.05), 0 0 0 70px rgba(255, 255, 255, 0.05) !important;
+  }
+}
 
 .glow-rock {
   box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(152, 0, 28), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0.1), 0 0 0 125px rgba(255, 255, 255, 0.1) !important;
+}
+@media only screen and (max-width: 700px) {
+  .glow-rock {
+    box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 8px rgb(152, 0, 28), 0 0 0 15px rgba(255, 255, 255, 0.05), 0 0 0 40px rgba(255, 255, 255, 0.05), 0 0 0 70px rgba(255, 255, 255, 0.05) !important;
+  }
 }/*# sourceMappingURL=style.css.map */

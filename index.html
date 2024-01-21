@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Rock</title>
 </head>
-
 <body>
     <section class="header-holder">
         <div class="header-div">
@@ -25,21 +23,24 @@
             </div>
         </div>
     </section>
-
     <section class="main-holder">
         <div class="background">
-            <div class="paper" value="1" onclick="startGame(this.getAttribute('class'))"><img src="images/icon-paper.svg"></div>
-            <div class="sciss" value="2" onclick="startGame(this.getAttribute('class'))"><img src="images/icon-scissors.svg"></div>
-            <div class="rock" value="3" onclick="startGame(this.getAttribute('class'))"><img src="images/icon-rock.svg"></div>
+            <div class="paper" value="1" onclick="startGame(this.getAttribute('class'))"><img
+                    src="images/icon-paper.svg"></div>
+            <div class="sciss" value="2" onclick="startGame(this.getAttribute('class'))"><img
+                    src="images/icon-scissors.svg"></div>
+            <div class="rock" value="3" onclick="startGame(this.getAttribute('class'))"><img src="images/icon-rock.svg">
+            </div>
         </div>
     </section>
-
     <section class="result-screen">
-            <div class="you-def" id="you-def1"><span class="you-picked">YOU PICKED</span><img class="you-img"></div>
-            <div class="result-text"><h1 id="res-sentence">YOU LOSE</h1><button onclick="playAgain()">PLAY AGAIN</button></div>
-            <div class="house-def" id="house-def1"><span class="house-picked">THE HOUSE PICKED</span><img class="house-img"></div>
+        <div class="you-def" id="you-def1"><span class="you-picked">YOU PICKED</span><img class="you-img"></div>
+        <div class="result-text">
+            <h1 id="res-sentence">YOU LOSE</h1><button onclick="playAgain()">PLAY AGAIN</button>
+        </div>
+        <div class="house-def" id="house-def1"><span class="house-picked">THE HOUSE PICKED</span><img class="house-img">
+        </div>
     </section>
-
     <button class="open-btn" onclick="openWindow()">RULES</button>
     <section class="modal-section">
         <div class="modal-content">
@@ -52,8 +53,6 @@
             </div>
         </div>
     </section>
-
     <script src="script.js"></script>
 </body>
-
 </html>
