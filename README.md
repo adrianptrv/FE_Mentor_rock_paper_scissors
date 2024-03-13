@@ -14,7 +14,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL on which you can check out the project: adrianptrv.github.io/Rock_paper_scissors_FE_Mentor
+- Live Site URL on which you can check out the project: https://adrianptrv.github.io/Rock_paper_scissors_FE_Mentor
 
 ## My process
 
