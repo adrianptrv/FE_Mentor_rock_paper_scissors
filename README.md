@@ -20,13 +20,13 @@ Users should be able to:
 
 1. Analyze the provided design pictures and build the HTML structure.
 2. Add all of the CSS styles through SCSS, and make the web application responsive.
-3. Add the functionality of the game with jQuery and Javascript.
+3. Add the functionality of the game with jQuery and JavaScript.
 
 ### Built with
 
 - HTML
 - SCSS
-- Javacript
+- JavaScript
 - jQuery
 
 ### Screenshots
