@@ -8,9 +8,9 @@ The challenge is to create a responsive web application of the Rock, Paper, Scis
 
 Users should be able to:
 
-- View the optimal layout for the game depending on their device's screen size
-- Play Rock, Paper, Scissors against the computer
-- Maintain the state of the score after refreshing the browser
+- View the optimal layout for the game depending on their device's screen size.
+- Play Rock, Paper, Scissors against the computer.
+- Maintain the state of the score after refreshing the browser. (Made the score value to be stored in the local storage.)
 
 ### Links
 
